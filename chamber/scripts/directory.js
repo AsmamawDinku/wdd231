@@ -103,6 +103,7 @@ function setupViewToggle() {
 function initHamburgerMenu() {
     const hamburger = document.getElementById('hamburger');
     const navigation = document.querySelector('.navigation');
+
     
     hamburger.addEventListener('click', () => {
         navigation.classList.toggle('show');
