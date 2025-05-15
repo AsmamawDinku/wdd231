@@ -1,111 +1,117 @@
-/* DISCOVER PAGE SPECIFIC STYLES */
+/* Base Layout */
 .discover-container {
     display: grid;
+    grid-template-columns: 1fr 3fr;
     gap: 2rem;
+    padding: 2rem;
     max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    grid-template-columns: 1fr;
+    margin: auto;
 }
 
-@media (min-width: 1024px) {
-    .discover-container {
-        grid-template-columns: 300px 1fr;
-    }
-}
-
+/* Sidebar */
 .discover-sidebar {
-    background: white;
+    background-color: #f5f5f5;
     padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    align-self: start;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.visitor-message {
-    background: var(--light-accent);
+.discover-sidebar h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.discover-sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.discover-sidebar li {
+    margin-bottom: 0.4rem;
+}
+
+.demographics-source {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 1rem;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.stat-item {
+    background: white;
     padding: 1rem;
-    border-radius: var(--border-radius);
-    margin-bottom: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #ddd;
 }
 
-.demographics-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    margin-bottom: 1.5rem;
+.stat-number {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: bold;
 }
 
+.stat-label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Main Header */
+.discover-header {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.discover-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Attractions Grid */
 .attractions-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    grid-template-columns: 1fr;
-}
-
-@media (min-width: 640px) {
-    .attractions-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .attractions-grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "card1 card2 card3"
-            "card4 card5 card6"
-            "card7 card8 .";
-    }
-    
-    .attraction-card:nth-child(1) { grid-area: card1; }
-    .attraction-card:nth-child(2) { grid-area: card2; }
-    .attraction-card:nth-child(3) { grid-area: card3; }
-    .attraction-card:nth-child(4) { grid-area: card4; }
-    .attraction-card:nth-child(5) { grid-area: card5; }
-    .attraction-card:nth-child(6) { grid-area: card6; }
-    .attraction-card:nth-child(7) { grid-area: card7; }
-    .attraction-card:nth-child(8) { grid-area: card8; }
 }
 
 .attraction-card {
-    background: white;
-    border-radius: var(--border-radius);
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s;
+    transition: transform 0.2s ease;
 }
 
 .attraction-card:hover {
     transform: translateY(-5px);
 }
 
-.attraction-image {
+.attraction-card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
-    transition: transform 0.5s;
 }
 
-.attraction-card:hover .attraction-image {
-    transform: scale(1.05);
+.attraction-card .info {
+    padding: 1rem;
 }
 
-.attraction-content {
-    padding: 1.5rem;
+.attraction-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
 }
 
-.learn-more-btn {
-    display: inline-block;
-    background: var(--primary-color);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: background 0.3s;
-}
-
-.learn-more-btn:hover {
-    background: var(--secondary-color);
+.attraction-card p {
+    font-size: 0.9rem;
+    color: #555;
 }

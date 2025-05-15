@@ -1,0 +1,36 @@
+{
+  "attractions": [
+    {
+      "name": "Clemyjontri Park",
+      "description": "A colorful playground designed for children of all abilities.",
+      "image": "images/clemyjontri.jpg"
+    },
+    {
+      "name": "Great Falls Park",
+      "description": "Enjoy scenic waterfalls, hiking trails, and Potomac River views.",
+      "image": "images/Great.jpg"
+    },
+    {
+      "name": "Tysons Galleria",
+      "description": "Luxury shopping destination with high-end stores and dining.",
+      "image": "images/Tysons.jpg"
+    },
+    {
+      "name": "McLean Central Park",
+      "description": "A peaceful retreat with walking paths and an amphitheater.",
+      "image": "images/McLean.jpg"
+    },
+    {
+      "name": "Claude Moore Colonial Farm",
+      "description": "Step back in time at this historical living farm museum.",
+      "image": "images/claude.jpg"
+    },
+
+    {
+      "name": "Scott's Run Nature Preserve",
+      "description": "A beautiful nature preserve with trails and scenic views.",
+      "image": "images/scotts-run.jpg"
+    }
+    
+  ]
+}

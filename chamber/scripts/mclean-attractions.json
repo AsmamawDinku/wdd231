@@ -1,0 +1,60 @@
+{
+    "attractions": [
+        {
+            "name": "Great Falls Park",
+            "address": "9200 Old Dominion Dr, McLean, VA 22102",
+            "description": "Spectacular waterfalls and hiking trails along the Potomac River. Part of the National Park Service with stunning views and picnic areas.",
+            "image": "great-falls.webp",
+            "website": "https://www.nps.gov/grfa/index.htm"
+        },
+        {
+            "name": "Clemyjontri Park",
+            "address": "6317 Georgetown Pike, McLean, VA 22101",
+            "description": "Unique accessible playground with colorful equipment, carousel, and picnic areas. Designed for children of all abilities.",
+            "image": "clemyjontri.webp",
+            "website": "https://www.fairfaxcounty.gov/parks/clemyjontri"
+        },
+        {
+            "name": "Scott's Run Nature Preserve",
+            "address": "7400 VA-193, McLean, VA 22102",
+            "description": "Beautiful forested area with waterfalls and hiking trails. A peaceful retreat with diverse plant life and scenic overlooks.",
+            "image": "scotts-run.webp",
+            "website": "https://www.fairfaxcounty.gov/parks/scotts-run"
+        },
+        {
+            "name": "McLean Community Center",
+            "address": "1234 Ingleside Ave, McLean, VA 22101",
+            "description": "Cultural hub offering arts programs, performances, and community events. Features the Alden Theatre and art galleries.",
+            "image": "community-center.webp",
+            "website": "https://www.mcleancenter.org"
+        },
+        {
+            "name": "Salona Village",
+            "address": "1214 Buchanan St, McLean, VA 22101",
+            "description": "Historic 19th-century estate with beautiful grounds. Once home to a Revolutionary War hero and now a public park.",
+            "image": "salona.webp",
+            "website": "https://www.fairfaxcounty.gov/parks/salona"
+        },
+        {
+            "name": "McLean Farmers Market",
+            "address": "6660 Old Dominion Dr, McLean, VA 22101",
+            "description": "Local vendors offering fresh produce, artisanal goods, and prepared foods. Open seasonally on Fridays.",
+            "image": "farmers-market.webp",
+            "website": "https://www.mcleanfarmersmarket.org"
+        },
+        {
+            "name": "Langley Fork Park",
+            "address": "1611 Lewinsville Rd, McLean, VA 22101",
+            "description": "Sports complex with fields, playgrounds, and walking trails. Home to McLean Little League and other community sports.",
+            "image": "langley-fork.webp",
+            "website": "https://www.fairfaxcounty.gov/parks/langley-fork"
+        },
+        {
+            "name": "The Alden Theatre",
+            "address": "1234 Ingleside Ave, McLean, VA 22101",
+            "description": "Premier venue for live performances in McLean. Hosts concerts, plays, and cultural events throughout the year.",
+            "image": "alden-theatre.webp",
+            "website": "https://www.mcleancenter.org/alden"
+        }
+    ]
+}
