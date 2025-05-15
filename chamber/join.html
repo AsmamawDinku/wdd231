@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the McLean Chamber of Commerce</title>
+    <meta name="description" content="Join the McLean Chamber of Commerce and enjoy exclusive benefits.">
+    <meta name="author" content="Asmamaw Dinku">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/join.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="McLean Chamber of Commerce Logo">
+                <h1>McLean Chamber of Commerce</h1>
+            </div>
+            <nav>
+                <button id="hamburger">☰</button>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li class="active"><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="join-container">
+        <div class="join-content">
+            <h1 class="join-header">Join the McLean Chamber of Commerce</h1>
+            
+            <form id="joinForm" class="join-form" method="get" action="thankyou.html">
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Contact Information</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name*</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required
+                                   autocomplete="given-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name*</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required
+                                   autocomplete="family-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" id="title" name="title" class="form-input"
+                                   autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}" 
+                                   title="Minimum 7 alpha characters, hyphens, and spaces only">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" id="email" name="email" class="form-input" required
+                                   autocomplete="email" placeholder="yourname@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone*</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required
+                                   autocomplete="tel">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Business Information</legend>
+                    <div class="form-group">
+                        <label for="business" class="form-label">Business Name*</label>
+                        <input type="text" id="business" name="business" class="form-input" required
+                               autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="form-label">Business Description</label>
+                        <textarea id="description" name="description" class="form-input" rows="4"></textarea>
+                    </div>
+                </fieldset>
+                
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">McLean Membership Options</legend>
+                    <div class="membership-options">
+                        <div class="form-group">
+                            <label for="membership" class="form-label">Membership Level*</label>
+                            <select id="membership" name="membership" class="form-input" required>
+                                <option value="">Select Your McLean Membership...</option>
+                                <option value="np">Non-Profit (Free)</option>
+                                <option value="bronze">Bronze ($200/year)</option>
+                                <option value="silver">Silver ($400/year)</option>
+                                <option value="gold">Gold ($800/year)</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <input type="hidden" id="timestamp" name="timestamp">
+                
+                <button type="submit" class="submit-btn">Join McLean Chamber</button>
+            </form>
+        </div>
+        
+        <div class="membership-benefits">
+            <h2>McLean Membership Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-level="np">
+                    <h3>Non-Profit</h3>
+                    <p>Free membership for registered non-profits</p>
+                    <button class="benefit-btn" onclick="openModal('np')">View Benefits</button>
+                </div>
+                <div class="benefit-card" data-level="bronze">
+                    <h3>Bronze</h3>
+                    <p>$200/year</p>
+                    <button class="benefit-btn" onclick="openModal('bronze')">View Benefits</button>
+                </div>
+                <div class="benefit-card" data-level="silver">
+                    <h3>Silver</h3>
+                    <p>$400/year</p>
+                    <button class="benefit-btn" onclick="openModal('silver')">View Benefits</button>
+                </div>
+                <div class="benefit-card" data-level="gold">
+                    <h3>Gold</h3>
+                    <p>$800/year</p>
+                    <button class="benefit-btn" onclick="openModal('gold')">View Benefits</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Membership Benefit Modals -->
+        <div id="np-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('np')">&times;</span>
+                <h3>Non-Profit Membership Benefits</h3>
+                <ul>
+                    <li>Free basic listing in our directory</li>
+                    <li>Access to member-only networking events</li>
+                    <li>Monthly newsletter</li>
+                    <li>Discounts on chamber-sponsored workshops</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Similar modals for bronze, silver, gold -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <img src="images/logo.png" alt="McLean Chamber of Commerce Logo">
+                <div>
+                    <h3>McLean Chamber of Commerce</h3>
+                    <p>2001 International Dr, McLean, VA 22102</p>
+                    <p><a href="https://maps.google.com/?q=2001+International+Dr,McLean,VA+22102" target="_blank" rel="noopener">
+                        <i class="fas fa-map-marker-alt"></i> View on Google Maps
+                    </a></p>
+                    <p><i class="fas fa-envelope"></i> info@mcleanchamber.org</p>
+                    <p><i class="fas fa-phone"></i> (703) 123-4567</p>
+                </div>
+            </div>
+            <div class="developer-info">
+                <p>&copy;<span id="copyright-year"></span> McLean Chamber of Commerce</p>
+                <p>Asmamaw Dinku</p>
+                <p>WDD 231 Project</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/join.js"></script>
+    <script src="scripts/common.js"></script>
+</body>
+
+
+</html>
