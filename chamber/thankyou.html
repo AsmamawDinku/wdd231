@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You for Joining</title>
-    <!-- Same head content -->
+    <!-- Same head content as join.html -->
+    <title>Thank You for Joining - McLean Chamber</title>
 </head>
 <body>
     <header>
-        <!-- Same header -->
+        <!-- Same header as other pages -->
     </header>
 
-    <main class="thankyou-main">
+    <main>
         <h1>Thank You for Joining!</h1>
-        <div id="memberInfo"></div>
+        <div class="thankyou-content">
+            <p>We've received your application with the following details:</p>
+            <div id="form-data"></div>
+            <p>We'll be in touch shortly to complete your membership process.</p>
+        </div>
     </main>
 
     <footer>
-        <!-- Same footer -->
+        <!-- Same footer as other pages -->
     </footer>
 
-    <script src="scripts/thankyou.js"></script>
+    <script>
+        // Parse URL parameters and display form data
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('form-data').innerHTML = `
+            <p><strong>Name:</strong> ${params.get('firstName')} ${params.get('lastName')}</p>
+            <p><strong>Email:</strong> ${params.get('email')}</p>
+            <p><strong>Phone:</strong> ${params.get('phone')}</p>
+            <p><strong>Business:</strong> ${params.get('business')}</p>
+            <p><strong>Membership Level:</strong> ${params.get('membership')}</p>
+            <p><strong>Application Date:</strong> ${new Date(params.get('timestamp')).toLocaleString()}</p>
+        `;
+    </script>
 </body>
 </html>

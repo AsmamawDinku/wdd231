@@ -1,4 +1,13 @@
 
+:root {
+    --primary-color: #2a5f8a;
+    --secondary-color: #3a7cb9;
+    --accent-color: #f5a623;
+    --text-color: #333;
+    --border-radius: 8px;
+    --shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 .join-container {
     display: grid;
     gap: 2rem;
@@ -146,7 +155,7 @@ textarea.form-input {
     transform: translateY(-2px);
 }
 
-/* Modal Styles */
+
 .modal {
     display: none;
     position: fixed;
@@ -182,8 +191,14 @@ textarea.form-input {
 
 /* Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (min-width: 768px) {
