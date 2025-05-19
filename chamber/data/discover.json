@@ -41,20 +41,7 @@
       "description": "Wooded preserve with waterfalls and Potomac River views.",
       "image": "images/attractions/scotts-run.webp",
       "map": "https://goo.gl/maps/f6gScotts"
-    },
-    {
-      "name": "Riverbend Park",
-      "address": "8700 Potomac Hills St, Great Falls, VA",
-      "description": "Kayaking, fishing, and trails along the Potomac.",
-      "image": "images/attractions/riverbend.webp",
-      "map": "https://goo.gl/maps/g7hRiverbend"
-    },
-    {
-      "name": "Lewinsville Park Farmers Market",
-      "address": "1659 Chain Bridge Rd, McLean, VA",
-      "description": "Saturday market featuring local produce and crafts.",
-      "image": "images/attractions/farmers‑market.webp",
-      "map": "https://goo.gl/maps/h8iMarket"
     }
+    
   ]
 }
