@@ -1,42 +1,60 @@
-/* ----------  TIMESTAMP  ---------- */
+// Set timestamp when page loads
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('timestamp').value = new Date().toISOString();
-
-  /* card fade‑in stagger */
-  document
-    .querySelectorAll('.benefit-card')
-    .forEach((card, i) =>
-      card.animate(
-        [{opacity:0, transform:'translateY(20px)'},
-         {opacity:1, transform:'translateY(0)'}],
-        {duration:500, delay:i*200, fill:'forwards', easing:'ease'}
-      )
-    );
+    document.getElementById('timestamp').value = new Date().toISOString();
+    
+    // Animate benefit cards
+    document.querySelectorAll('.benefit-card').forEach((card, i) => {
+        card.style.opacity = 0;
+        card.style.transform = 'translateY(20px)';
+        card.style.animation = `fadeIn 0.5s ${i * 0.2}s forwards`;
+    });
 });
 
-/* ----------  MODALS  ---------- */
-const openModal = level => {
-  const modal = document.getElementById(`${level}-modal`);
-  if(modal) modal.style.display = 'block';
-};
-const closeModal = level => {
-  const modal = document.getElementById(`${level}-modal`);
-  if(modal) modal.style.display = 'none';
-};
+// Modal functions
+function openModal(level) {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close" onclick="this.parentElement.parentElement.remove()">&times;</span>
+            <h3>${level.charAt(0).toUpperCase() + level.slice(1)} Benefits</h3>
+            <ul>
+                ${getBenefits(level).map(b => `<li>${b}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
 
-document.addEventListener('click', e => {
-  /* open buttons */
-  if(e.target.matches('[data-open]')){
-    openModal(e.target.dataset.open);
-  }
-  /* close click on ❌ */
-  if(e.target.matches('.close')) closeModal(e.target.closest('.modal').id.replace('-modal',''));
-  /* click outside modal */
-  if(e.target.classList.contains('modal')) e.target.style.display='none';
-});
-
-/* ----------  MOBILE NAV  ---------- */
-document.getElementById('hamburger')
-  .addEventListener('click', () =>
-    document.querySelector('.navigation').classList.toggle('show')
-  );
+function getBenefits(level) {
+    const benefits = {
+        np: [
+            'Free directory listing',
+            'Member networking events',
+            'Monthly newsletter',
+            'Workshop discounts'
+        ],
+        bronze: [
+            'All Non-Profit benefits',
+            'Enhanced directory listing',
+            '2 free event tickets',
+            '10% advertising discount'
+        ],
+        silver: [
+            'All Bronze benefits',
+            'Logo in directory',
+            '4 free event tickets',
+            '15% advertising discount',
+            'Business mentoring'
+        ],
+        gold: [
+            'All Silver benefits',
+            'Premium directory placement',
+            'Unlimited event tickets',
+            '25% advertising discount',
+            'VIP gala access',
+            'Newsletter feature'
+        ]
+    };
+    return benefits[level] || [];
+}

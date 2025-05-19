@@ -3,32 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join the McLean Chamber of Commerce - Membership Application</title>
-    <meta name="description" content="Apply for membership with the McLean Chamber of Commerce. Choose from our four membership levels and enjoy networking, business growth opportunities, and community involvement.">
+    <title>Join McLean Chamber of Commerce - Membership & Benefits</title>
+    <meta name="description" content="Apply for McLean Chamber membership. Choose from four membership levels with networking, business growth, and community benefits.">
     <meta name="author" content="Asmamaw Dinku">
-    <meta property="og:title" content="Join the McLean Chamber of Commerce">
-    <meta property="og:description" content="Become a member of the McLean Chamber of Commerce and access exclusive benefits for your business. Network with local leaders and grow your business in our community.">
+    <meta property="og:title" content="Join McLean Chamber of Commerce">
+    <meta property="og:description" content="Access exclusive business benefits by joining the McLean Chamber of Commerce today.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="join.html">
-    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://asmamawdinku.github.io/wdd231/chamber/join.html">
+    <meta property="og:image" content="https://asmamawdinku.github.io/wdd231/chamber/images/logo.png">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- CSS Links -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/join.css">
-    
-   <!-- w3c-validator-ignore-start -->
-<link rel="stylesheet" <link rel="stylesheet" href="styles/fontawesome.css">
-<!-- w3c-validator-ignore-end -->
-    
-    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="images/logo.png" alt="McLean Chamber of Commerce Logo" width="100" height="100">
+                <img src="images/logo.png" alt="McLean Chamber Logo" width="100" height="100">
                 <h1>McLean Chamber of Commerce</h1>
             </div>
             <nav>
@@ -44,156 +38,84 @@
     </header>
 
     <main class="join-container">
-        <h1 class="join-header">Join the McLean Chamber of Commerce</h1>
+        <h1 class="join-header">Join the McLean Chamber</h1>
         
-        <div class="join-content">
-            <form id="joinForm" class="join-form" method="get" action="thankyou.html">
-                <fieldset class="form-fieldset">
-                    <legend class="form-legend">Contact Information</legend>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="firstName" class="form-label">First Name*</label>
-                            <input type="text" id="firstName" name="firstName" class="form-input" required
-                                   autocomplete="given-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName" class="form-label">Last Name*</label>
-                            <input type="text" id="lastName" name="lastName" class="form-input" required
-                                   autocomplete="family-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="title" class="form-label">Title</label>
-                            <input type="text" id="title" name="title" class="form-input"
-                                   autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}" 
-                                   title="Minimum 7 alpha characters, hyphens, and spaces only">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email*</label>
-                            <input type="email" id="email" name="email" class="form-input" required
-                                   autocomplete="email" placeholder="yourname@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone*</label>
-                            <input type="tel" id="phone" name="phone" class="form-input" required
-                                   autocomplete="tel">
-                        </div>
-                    </div>
-                </fieldset>
-                
-                <fieldset class="form-fieldset">
-                    <legend class="form-legend">Business Information</legend>
+        <form id="joinForm" class="join-form" method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div class="form-grid">
                     <div class="form-group">
-                        <label for="business" class="form-label">Business Name*</label>
-                        <input type="text" id="business" name="business" class="form-input" required
-                               autocomplete="organization">
+                        <label for="firstName">First Name*</label>
+                        <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
                     </div>
                     <div class="form-group">
-                        <label for="description" class="form-label">Business Description</label>
-                        <textarea id="description" name="description" class="form-input" rows="4"></textarea>
+                        <label for="lastName">Last Name*</label>
+                        <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
                     </div>
-                </fieldset>
-                
-                <fieldset class="form-fieldset">
-                    <legend class="form-legend">McLean Membership Options</legend>
-                    <div class="membership-options">
-                        <div class="form-group">
-                            <label for="membership" class="form-label">Membership Level*</label>
-                            <select id="membership" name="membership" class="form-input" required>
-                                <option value="">Select Your McLean Membership...</option>
-                                <option value="np">Non-Profit (Free)</option>
-                                <option value="bronze">Bronze ($200/year)</option>
-                                <option value="silver">Silver ($400/year)</option>
-                                <option value="gold">Gold ($800/year)</option>
-                            </select>
-                        </div>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" pattern="[A-Za-z\- ]{7,}" 
+                               title="7+ letters, hyphens or spaces only">
                     </div>
-                </fieldset>
-                
-                <input type="hidden" id="timestamp" name="timestamp">
-                
-                <button type="submit" class="submit-btn">Submit Membership Application</button>
-            </form>
-        </div>
-        
-        <div class="membership-benefits">
-            <h2>McLean Membership Benefits</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card" data-level="np">
-                    <h3>Non-Profit</h3>
-                    <p>Free membership for registered non-profits</p>
-                    <button class="benefit-btn" onclick="openModal('np')">View Benefits</button>
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
                 </div>
-                <div class="benefit-card" data-level="bronze">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Business Information</legend>
+                <div class="form-group">
+                    <label for="business">Business Name*</label>
+                    <input type="text" id="business" name="business" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Business Description</label>
+                    <textarea id="description" name="description" rows="4"></textarea>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Membership Level*</legend>
+                <div class="form-group">
+                    <select id="membership" name="membership" required>
+                        <option value="">Select Level...</option>
+                        <option value="np">Non-Profit (Free)</option>
+                        <option value="bronze">Bronze ($200/year)</option>
+                        <option value="silver">Silver ($400/year)</option>
+                        <option value="gold">Gold ($800/year)</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <input type="hidden" id="timestamp" name="timestamp">
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+
+        <div class="benefits-section">
+            <h2>Membership Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" onclick="openModal('np')">
+                    <h3>Non-Profit</h3>
+                    <p>Free membership</p>
+                </div>
+                <div class="benefit-card" onclick="openModal('bronze')">
                     <h3>Bronze</h3>
                     <p>$200/year</p>
-                    <button class="benefit-btn" onclick="openModal('bronze')">View Benefits</button>
                 </div>
-                <div class="benefit-card" data-level="silver">
+                <div class="benefit-card" onclick="openModal('silver')">
                     <h3>Silver</h3>
                     <p>$400/year</p>
-                    <button class="benefit-btn" onclick="openModal('silver')">View Benefits</button>
                 </div>
-                <div class="benefit-card" data-level="gold">
+                <div class="benefit-card" onclick="openModal('gold')">
                     <h3>Gold</h3>
                     <p>$800/year</p>
-                    <button class="benefit-btn" onclick="openModal('gold')">View Benefits</button>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Membership Benefit Modals -->
-        <div id="np-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('np')">&times;</span>
-                <h3>Non-Profit Membership Benefits</h3>
-                <ul>
-                    <li>Free basic listing in our directory</li>
-                    <li>Access to member-only networking events</li>
-                    <li>Monthly newsletter</li>
-                    <li>Discounts on chamber-sponsored workshops</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div id="bronze-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('bronze')">&times;</span>
-                <h3>Bronze Membership Benefits</h3>
-                <ul>
-                    <li>All Non-Profit benefits</li>
-                    <li>Business listing in online directory</li>
-                    <li>Two free event tickets per year</li>
-                    <li>10% discount on advertising</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div id="silver-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('silver')">&times;</span>
-                <h3>Silver Membership Benefits</h3>
-                <ul>
-                    <li>All Bronze benefits</li>
-                    <li>Enhanced business listing with logo</li>
-                    <li>Four free event tickets per year</li>
-                    <li>15% discount on advertising</li>
-                    <li>Access to business mentoring program</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div id="gold-modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('gold')">&times;</span>
-                <h3>Gold Membership Benefits</h3>
-                <ul>
-                    <li>All Silver benefits</li>
-                    <li>Premium directory placement</li>
-                    <li>Unlimited event tickets</li>
-                    <li>25% discount on advertising</li>
-                    <li>VIP access to annual gala</li>
-                    <li>Featured spot in newsletter</li>
-                </ul>
             </div>
         </div>
     </main>
@@ -201,27 +123,24 @@
     <footer>
         <div class="footer-content">
             <div class="contact-info">
-                <img src="images/logo.png" alt="McLean Chamber of Commerce Logo" width="80" height="80">
+                <img src="images/logo.png" alt="Chamber Logo" width="80" height="80">
                 <div>
-                    <h3>McLean Chamber of Commerce</h3>
-                    <p>2001 International Dr, McLean, VA 22102</p>
-                    <p><a href="https://maps.google.com/?q=2001+International+Dr,McLean,VA+22102" target="_blank" rel="noopener">
-                        <i class="fas fa-map-marker-alt"></i> View on Google Maps
-                    </a></p>
+                    <h3>McLean Chamber</h3>
+                    <p>2001 International Dr, McLean, VA</p>
                     <p><i class="fas fa-envelope"></i> info@mcleanchamber.org</p>
                     <p><i class="fas fa-phone"></i> (703) 123-4567</p>
                 </div>
             </div>
             <div class="developer-info">
-                <p>&copy;<span id="copyright-year"></span> McLean Chamber of Commerce</p>
+                <p>&copy;<span id="year"></span> McLean Chamber</p>
                 <p>Asmamaw Dinku</p>
                 <p>WDD 231 Project</p>
-                <p>Last Modified: <span id="last-modified"></span></p>
+                <p>Last Modified: <span id="lastModified"></span></p>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/join.js"></script>
+    <script src="=scripts/join.js"></script>
     <script src="scripts/common.js"></script>
 </body>
 </html>
