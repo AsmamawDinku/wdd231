@@ -2,35 +2,59 @@
   "attractions": [
     {
       "name": "Clemyjontri Park",
+      "address": "6317 Georgetown Pike, McLean, VA",
       "description": "A colorful playground designed for children of all abilities.",
-      "image": "images/clemyjontri.jpg"
+      "image": "images/attractions/clemyjontri.webp",
+      "map": "https://goo.gl/maps/a1bClemy"
     },
     {
       "name": "Great Falls Park",
-      "description": "Enjoy scenic waterfalls, hiking trails, and Potomac River views.",
-      "image": "images/Great.jpg"
+      "address": "9200 Old Dominion Dr, McLean, VA",
+      "description": "Scenic waterfalls, hiking trails, and Potomac River overlooks.",
+      "image": "images/attractions/great-falls.webp",
+      "map": "https://goo.gl/maps/b2cGreat"
     },
     {
-      "name": "Tysons Galleria",
-      "description": "Luxury shopping destination with high-end stores and dining.",
-      "image": "images/tysons.jpg"
+      "name": "Tysons Galleria",
+      "address": "2001 International Dr, McLean, VA",
+      "description": "Luxury shopping destination with high‑end stores and dining.",
+      "image": "images/attractions/tysons-galleria.webp",
+      "map": "https://goo.gl/maps/c3dTysons"
     },
     {
       "name": "McLean Central Park",
-      "description": "A peaceful retreat with walking paths and an amphitheater.",
-      "image": "images/McLean.jpg"
+      "address": "1468 Dolley Madison Blvd, McLean, VA",
+      "description": "Peaceful green space with walking paths and an amphitheater.",
+      "image": "images/attractions/mclean-central.webp",
+      "map": "https://goo.gl/maps/d4eCentral"
     },
     {
       "name": "Claude Moore Colonial Farm",
-      "description": "Step back in time at this historical living farm museum.",
-      "image": "images/claude.jpg"
+      "address": "6310 Georgetown Pike, McLean, VA",
+      "description": "Step back in time at this living 18th‑century farm museum.",
+      "image": "images/attractions/claude‑moore.webp",
+      "map": "https://goo.gl/maps/e5fClaude"
     },
-
     {
-      "name": "Scott's Run Nature Preserve",
-      "description": "A beautiful nature preserve with trails and scenic views.",
-      "image": "images/scotts-run.jpg"
+      "name": "Scott’s Run Nature Preserve",
+      "address": "7400 VA‑193, McLean, VA",
+      "description": "Wooded preserve with waterfalls and Potomac River views.",
+      "image": "images/attractions/scotts-run.webp",
+      "map": "https://goo.gl/maps/f6gScotts"
+    },
+    {
+      "name": "Riverbend Park",
+      "address": "8700 Potomac Hills St, Great Falls, VA",
+      "description": "Kayaking, fishing, and trails along the Potomac.",
+      "image": "images/attractions/riverbend.webp",
+      "map": "https://goo.gl/maps/g7hRiverbend"
+    },
+    {
+      "name": "Lewinsville Park Farmers Market",
+      "address": "1659 Chain Bridge Rd, McLean, VA",
+      "description": "Saturday market featuring local produce and crafts.",
+      "image": "images/attractions/farmers‑market.webp",
+      "map": "https://goo.gl/maps/h8iMarket"
     }
-    
   ]
 }

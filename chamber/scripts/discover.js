@@ -1,39 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Visit message logic
-    const visitMessage = document.getElementById('visit-message');
-    const lastVisit = localStorage.getItem('lastVisit');
-    const now = Date.now();
+  /* visit message */
+  const msg  = document.getElementById("visit-message");
+  const now  = Date.now();
+  const last = Number(localStorage.getItem("lastVisit") || 0);
 
-    if (!lastVisit) {
-        visitMessage.textContent = "Welcome! This is your first visit.";
-    } else {
-        const daysAgo = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-        visitMessage.textContent = `Welcome back! Your last visit was ${daysAgo} day(s) ago.`;
-    }
+  if (!last){
+    msg.textContent = "Welcome! Let us know if you have any questions.";
+  } else {
+    const days = Math.floor((now - last) / 86_400_000);
+    msg.textContent = days < 1
+      ? "Back so soon! Awesome!"
+      : `You last visited ${days} day${days === 1 ? "" : "s"} ago.`;
+  }
+  localStorage.setItem("lastVisit", now);
 
-    localStorage.setItem('lastVisit', now);
-
-    // Load attractions
-    fetch("data/discover.json")
-        .then(response => response.json())
-        .then(data => {
-            const container = document.getElementById('attractions-container');
-            data.attractions.forEach(attraction => {
-                const card = document.createElement("div");
-                card.classList.add("attraction-card");
-
-                card.innerHTML = `
-                    <img src="${attraction.image}" alt="${attraction.name}">
-                    <div class="info">
-                        <h3>${attraction.name}</h3>
-                        <p>${attraction.description}</p>
-                    </div>
-                `;
-
-                container.appendChild(card);
-            });
-        })
-        .catch(error => {
-            console.error("Error loading attractions:", error);
-        });
+  /* attraction cards */
+  fetch("data/discover.json")
+    .then(r => r.json())
+    .then(({attractions}) => {
+      const container = document.getElementById("attractions-container");
+      attractions.forEach(a => {
+        container.insertAdjacentHTML("beforeend", `
+          <article class="attraction-card">
+            <img src="${a.image}" alt="${a.name}" width="300" height="200" loading="lazy">
+            <div class="info">
+              <h3>${a.name}</h3>
+              <address>${a.address}</address>
+              <p>${a.description}</p>
+              <a class="learn-btn" href="${a.map}" target="_blank" rel="noopener">Learn More</a>
+            </div>
+          </article>
+        `);
+      });
+    })
+    .catch(err => console.error("Attractions load failed:", err));
 });

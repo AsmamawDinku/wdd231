@@ -1,93 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover McLean | McLean Chamber of Commerce</title>
-    <meta name="description" content="Explore the best of McLean, Virginia with our Chamber of Commerce">
-    <meta name="author" content="Asmamaw Dinku">
-    
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/discover.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Discover McLean | McLean Chamber of Commerce</title>
+  <meta name="description" content="Discover parks, shopping, and historical sites in McLean, Virginia.">
+  <meta name="author" content="Asmamaw Dinku">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Discover McLean | McLean Chamber of Commerce">
+  <meta property="og:description" content="Explore eight must‑see attractions, demographics, and highlights of McLean, VA.">
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://asmamawdinku.github.io/wdd231/chamber/discover.html">
+  <meta property="og:image"       content="images/og‑discover.webp">
+
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/discover.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="images/logo.png" alt="McLean Chamber of Commerce Logo">
-                <h1>McLean Chamber of Commerce</h1>
-            </div>
-            <nav>
-                <button id="hamburger">☰</button>
-                <ul class="navigation">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="discover.html">Discover</a></li>
-                    <li><a href="directory.html">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/logo.png" alt="McLean Chamber Logo" width="80" height="80" loading="lazy">
+        <h1 class="visually-hidden">McLean Chamber of Commerce</h1>
+      </div>
 
-    <main class="discover-container">
-        <div class="discover-header">
-            <h1>Discover McLean</h1>
-            <p>Explore the vibrant community of McLean, Virginia</p>
-        </div>
-        
-        <aside class="discover-sidebar">
-            <div class="visitor-message">
-                <h2><i class="fas fa-calendar-alt"></i> Your Visit</h2>
-                <p id="visit-message">Loading visit information...</p>
-            </div>
-            
-            <div class="demographics-card">
-                <h2><i class="fas fa-chart-pie"></i> McLean Demographics</h2>
-                <ul>
-                    <li><strong>Population:</strong> 50,773 (2022 est.)</li>
-                    <li><strong>Median Income:</strong> $190,000</li>
-                    <li><strong>Median Home Value:</strong> $1.2M</li>
-                    <li><strong>Top Employers:</strong> Capital One, Freddie Mac, Booz Allen Hamilton</li>
-                </ul>
-                <p class="demographics-source">Source: U.S. Census Bureau, Fairfax County</p>
-            </div>
-            
-            <div class="statistics-card">
-                <h2><i class="fas fa-star"></i> McLean Highlights</h2>
-                <div class="stat-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Parks</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Restaurants</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">8</div>
-                        <div class="stat-label">Schools</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4</div>
-                        <div class="stat-label">Country Clubs</div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        
-        <section class="attractions-grid" id="attractions-container">
-            <!-- Attractions will be loaded from JSON -->
-        </section>
-    </main>
+      <nav>
+        <button id="hamburger" aria-label="Menu">☰</button>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <footer>
+  <main class="discover-container">
+    <h1 class="page-title">Discover McLean</h1>
+    <p class="page-sub">Explore the vibrant community of McLean, Virginia.</p>
+
+    <aside class="discover-sidebar">
+      <section class="visitor-message">
+        <h2><i class="fas fa-calendar-alt"></i> Your Visit</h2>
+        <p id="visit-message">Loading visit information…</p>
+      </section>
+
+      <section class="demographics-card">
+        <h2><i class="fas fa-chart-pie"></i> McLean Demographics</h2>
+        <ul>
+          <li><strong>Population:</strong> 50,773 (2022 est.)</li>
+          <li><strong>Median Income:</strong> $190,000</li>
+          <li><strong>Median Home Value:</strong> $1.2 M</li>
+          <li><strong>Top Employers:</strong> Capital One, Freddie Mac, Booz Allen Hamilton</li>
+        </ul>
+        <p class="demographics-source">Source: U.S. Census Bureau, Fairfax County</p>
+      </section>
+
+      <section class="statistics-card">
+        <h2><i class="fas fa-star"></i> McLean Highlights</h2>
+        <div class="stat-grid">
+          <div class="stat-item"><div class="stat-number">15+</div><div class="stat-label">Parks</div></div>
+          <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">Restaurants</div></div>
+          <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">Schools</div></div>
+          <div class="stat-item"><div class="stat-number">4</div><div class="stat-label">Country Clubs</div></div>
+        </div>
+      </section>
+    </aside>
+
+    <section class="attractions-grid" id="attractions-container" aria-live="polite"></section>
+  </main>
+
+ <footer>
         <div class="footer-content">
             <div class="contact-info">
                 <img src="images/logo.png" alt="McLean Chamber of Commerce Logo">
@@ -110,7 +103,8 @@
         </div>
     </footer>
 
-    <script src="scripts/discover.js"></script>
-    <script src="scripts/common.js"></script>
+  <script src="scripts/discover.js" defer></script>
+  <script src="scripts/common.js"   defer></script>
 </body>
 </html>
+
