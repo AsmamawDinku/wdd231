@@ -6,18 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.benefit-card');
     cards.forEach((card, index) => {
         card.style.animation = `fadeIn 0.5s ease ${index * 0.2}s forwards`;
-        card.style.opacity = 0;
     });
 });
 
 // Modal functionality
 function openModal(level) {
     const modal = document.getElementById(`${level}-modal`);
-    modal.style.display = 'block';
+    if (modal) {
+        modal.style.display = 'block';
+    }
 }
 
 function closeModal(level) {
-    document.getElementById(`${level}-modal`).style.display = 'none';
+    const modal = document.getElementById(`${level}-modal`);
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
 
 // Close modal when clicking outside content
