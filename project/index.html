@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Planning Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+<body>
+  <header>
+    <h1>Website Planning Document</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Explore McLean Trails</strong></p>
+      <p>This name highlights our focus on helping users discover walking, hiking, and biking trails in McLean, Virginia.</p>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>Provides comprehensive trail information including difficulty levels, distances, amenities, and user reviews for McLean's outdoor spaces.</p>
+    </section>
+
+    <section>
+      <h2>Scenarios</h2>
+      <ul>
+        <li>Where can I find kid-friendly hiking trails in McLean?</li>
+        <li>Which trails have bike rentals and rest areas?</li>
+        <li>What are the best scenic trails for photography?</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Color Schema</h2>
+      <div class="color-swatch" style="background-color: #2F4F4F; color: white;">#2F4F4F</div>
+      <p>Primary: #2F4F4F (Dark Slate Gray) - Used for headings and navigation</p>
+      <div class="color-swatch" style="background-color: #E0F7FA;">#E0F7FA</div>
+      <p>Secondary: #E0F7FA (Light Cyan) - Used for backgrounds and cards</p>
+      <div class="color-swatch" style="background-color: #4CAF50; color: white;">#4CAF50</div>
+      <p>Accent: #4CAF50 (Green) - Used for buttons and interactive elements</p>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <p class="merriweather">Heading Font: Merriweather (Bold 700) - Used for all headings</p>
+      <p class="roboto">Body Font: Roboto (Regular 400) - Used for all body text</p>
+      <p class="roboto-bold">Button Font: Roboto (Bold 700) - Used for buttons and calls-to-action</p>
+    </section>
+
+    <section>
+      <h2>Wireframes</h2>
+      <div class="wireframes">
+        <div>
+          <h3>Mobile View</h3>
+          <img src="images/mobile-wireframe.png" alt="Mobile wireframe" class="wireframe-img">
+          <ul>
+            <li>Hamburger menu navigation in top-right corner</li>
+            <li>Single column layout for trail cards</li>
+            <li>Filter button fixed at bottom for easy access</li>
+            <li>Clear call-to-action buttons</li>
+            <li>Responsive image sizing</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Desktop View</h3>
+          <img src="images/desktop-wireframe.png" alt="Desktop wireframe" class="wireframe-img">
+          <ul>
+            <li>Full horizontal navigation bar with dropdown menus</li>
+            <li>3-column layout for trail cards</li>
+            <li>Featured trail section at top with hero image</li>
+            <li>Sidebar with filters and quick links</li>
+            <li>Footer with additional navigation and contact info</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 | Asmamaw Dinku 🌲🚴‍♂️🌄💚</p>
+    <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
