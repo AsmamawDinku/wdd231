@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page of the McLean Chamber of Commerce">
+    <meta name="author" content="Asmamaw Dinku">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="McLean Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://asmamawdinku.github.io/wdd231/chamber/images/hero-image.jpg">
+    <meta property="og:url" content="https://asmamawdinku.github.io/wdd231/chamber/">
+    <meta property="og:image" content="images/og-discover.webp">
+
+    <title>McLean Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/extra.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="McLean Chamber of Commerce Logo">
+                <h1>McLean Chamber of Commerce</h1>
+            </div>
+            <nav>
+                <button id="hamburger">☰</button>
+                <ul class="navigation">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with CTA -->
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/hero-small.webp">
+                <source media="(max-width: 1200px)" srcset="images/hero-medium.webp">
+                <img src="images/hero-large.jpg" alt="McLean city skyline" loading="lazy">
+            </picture>
+            <div class="hero-content">
+                <h2>Welcome to McLean</h2>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <div class="event-card">
+                <h3>Business Networking Mixer</h3>
+                <p><i class="fas fa-calendar-alt"></i> June 15, 2024</p>
+                <p><i class="fas fa-map-marker-alt"></i> McLean Community Center</p>
+            </div>
+            <div class="event-card">
+                <h3>Economic Forecast Breakfast</h3>
+                <p><i class="fas fa-calendar-alt"></i> June 22, 2024</p>
+                <p><i class="fas fa-map-marker-alt"></i> Hilton McLean Tysons Corner</p>
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather Information</h2>
+            <div class="current-weather">
+                <h3>Current Conditions</h3>
+                <div id="weather-data">
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+            <div class="forecast">
+                <h3>3-Day Forecast</h3>
+                <div id="forecast-data"></div>
+            </div>
+        </section>
+
+        <!-- Member Spotlights Section -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="spotlight-grid">
+                <!-- Dynamically filled by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <img src="images/logo.png" alt="McLean Chamber of Commerce Logo">
+                <div>
+                    <h3>McLean Chamber of Commerce</h3>
+                    <p>2001 International Dr, McLean, VA 22102</p>
+                    <p><i class="fas fa-envelope"></i> info@mcleanchamber.org</p>
+                    <p><i class="fas fa-phone"></i> (202) 556-1441</p>
+                </div>
+            </div>
+            <div class="developer-info">
+                <p>&copy;<span id="copyright-year"></span> McLean Chamber of Commerce</p>
+                <p>Asmamaw Dinku</p>
+                <p>WDD 231 Project</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
+    <script src="scripts/common.js"></script>
+</body>
+</html>

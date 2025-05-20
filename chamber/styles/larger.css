@@ -1,48 +1,144 @@
-@media (min-width: 900px) {
-    .hero-content h2 {
-        font-size: 2.5rem;
-    }
+/* Directory Page Styles */
+.directory-main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1.5rem;
-    }
+.directory-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
 
-    .hero {
-        grid-column: 1 / -1;
-    }
+.view-toggle {
+    display: flex;
+    gap: 1rem;
+}
 
-    .events {
-        grid-column: 1;
-        grid-row: 2;
-    }
+.view-toggle button {
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
-    .weather {
-        grid-column: 2;
-        grid-row: 2;
-    }
+.view-toggle button.active {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+}
 
-    .spotlights {
-        grid-column: 1 / -1;
-    }
+#member-container {
+    display: grid;
+    gap: 2rem;
+}
 
-    .spotlight-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+/* Grid View */
+#member-container.grid-view {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
 
-    #forecast-data {
+.member-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.member-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 1.5rem;
+}
+
+.member-info h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.member-info p {
+    margin: 0.5rem 0;
+}
+
+/* List View */
+#member-container.list-view {
+    grid-template-columns: 1fr;
+}
+
+.member-list-item {
+    display: grid;
+    grid-template-columns: 100px 2fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.member-list-item img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.list-item-primary h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+/* Membership badges */
+.membership-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.membership-1 {
+    background-color: #6c757d;
+    color: white;
+}
+
+.membership-2 {
+    background-color: #c0c0c0;
+    color: #333;
+}
+
+.membership-3 {
+    background-color: #ffd700;
+    color: #333;
+}
+
+/* Error message */
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .directory-controls {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
     }
-
-    .forecast-day {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        text-align: left;
-        min-width: auto;
+    
+    .member-list-item {
+        grid-template-columns: 1fr;
     }
 }

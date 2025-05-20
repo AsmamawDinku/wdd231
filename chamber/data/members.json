@@ -1,74 +1,74 @@
 {
-    "members": [
-        {
-            "name": "McLean Hardware",
-            "address": "123 Main Street, McLean, VA 22102",
-            "mapLink": "https://maps.google.com/?q=123+Main+Street,McLean,VA+22102",
-            "phone": "(555) 123-4567",
-            "website": "https://mcleanhardware.com",
-            "image": "images/directory/cover.jpg",
-            "membershipLevel": 3,
-            "additionalInfo": "Family-owned hardware store since 1952"
-        },
-        {
-            "name": "Green Valley Grocers",
-            "address": "456 Oak Avenue, McLean, VA 22102",
-            "mapLink": "https://maps.google.com/?q=456+Oak+Avenue,McLean,VA+22102",
-            "phone": "(555) 234-5678",
-            "website": "https://greenvalleygrocers.com",
-            "image": "images/directory/cover.jpg",
-            "membershipLevel": 2,
-            "additionalInfo": "Organic and locally sourced products"
-        },
-        {
-            "name": "Tech Solutions Inc.",
-            "address": "789 Tech Park, McLean, VA 22102",
-            "mapLink": "https://maps.google.com/?q=789+Tech+Park,McLean,VA+22102",
-            "phone": "(555) 345-6789",
-            "website": "https://techsolutions.com",
-            "image": "images/directory/cover.jpg",
-            "membershipLevel": 3,
-            "additionalInfo": "IT services and consulting"
-        },
-        {
-            "name": "McLean Dental Care",
-            "address": "321 Elm Street, McLean, VA 22102",
-            "mapLink": "https://maps.google.com/?q=321+Elm+Street,McLean,VA+22102",
-            "phone": "(555) 456-7890",
-            "website": "https://mcleandentalcare.com",
-            "image": "images/directory/cover.jpg",
-            "membershipLevel": 1,
-            "additionalInfo": "Comprehensive dental care for the whole family"
-        },
-        {
-            "name": "Asme Street Cafe",
-            "address": "159 Main Street, McLean, VA 22102",
-            "mapLink": "https://maps.google.com/?q=159+Main+Street,McLean,VA+22102",
-            "phone": "(555) 567-8901",
-            "website": "https://asmerestaurant.com",
-            "image": "images/directory/cover.jpg",
-            "membershipLevel": 2,
-            "additionalInfo": "Homemade meals and baked goods"
-        },
-        {
-            "name": "McLean Auto Repair",
-            "address": "753 Industrial Drive, McLean, VA 22102",
-            "mapLink": "https://maps.google.com/?q=753+Industrial+Drive,McLean,VA+22102",
-            "phone": "(555) 678-9012",
-            "website": "https://mcleanautorepair.com",
-            "image": "images/directory/cover.jpg",
-            "membershipLevel": 1,
-            "additionalInfo": "Honest and reliable auto service"
-        },
-        {
-            "name": "Creative Designs",
-            "address": "852 Artisan Lane, McLean, VA 22102",
-            "mapLink": "https://maps.google.com/?q=852+Artisan+Lane,McLean,VA+22102",
-            "phone": "(555) 789-0123",
-            "website": "https://creativedesigns.com",
-            "image": "images/directory/cover.jpg",
-            "membershipLevel": 3,
-            "additionalInfo": "Graphic design and marketing services"
-        }
-    ]
+  "members": [
+    {
+      "name": "McLean Hardware",
+      "address": "123 Main Street, McLean, VA 22102",
+      "mapLink": "https://maps.google.com/?q=123+Main+Street,McLean,VA+22102",
+      "phone": "(555) 123-4567",
+      "website": "https://mcleanhardware.com",
+      "image": "cover.jpg",
+      "membershipLevel": 3,
+      "additionalInfo": "Family-owned hardware store since 1952"
+    },
+    {
+      "name": "Green Valley Grocers",
+      "address": "456 Oak Avenue, McLean, VA 22102",
+      "mapLink": "https://maps.google.com/?q=456+Oak+Avenue,McLean,VA+22102",
+      "phone": "(555) 234-5678",
+      "website": "https://greenvalleygrocers.com",
+      "image": "cover.jpg",
+      "membershipLevel": 2,
+      "additionalInfo": "Organic and locally sourced products"
+    },
+    {
+      "name": "Tech Solutions Inc.",
+      "address": "789 Tech Park, McLean, VA 22102",
+      "mapLink": "https://maps.google.com/?q=789+Tech+Park,McLean,VA+22102",
+      "phone": "(555) 345-6789",
+      "website": "https://techsolutions.com",
+      "image": "cover.jpg",
+      "membershipLevel": 3,
+      "additionalInfo": "IT services and consulting"
+    },
+    {
+      "name": "McLean Dental Care",
+      "address": "321 Elm Street, McLean, VA 22102",
+      "mapLink": "https://maps.google.com/?q=321+Elm+Street,McLean,VA+22102",
+      "phone": "(555) 456-7890",
+      "website": "https://mcleandentalcare.com",
+      "image": "cover.jpg",
+      "membershipLevel": 1,
+      "additionalInfo": "Comprehensive dental care for the whole family"
+    },
+    {
+      "name": "Asme Street Cafe",
+      "address": "159 Main Street, McLean, VA 22102",
+      "mapLink": "https://maps.google.com/?q=159+Main+Street,McLean,VA+22102",
+      "phone": "(555) 567-8901",
+      "website": "https://asmerestaurant.com",
+      "image": "cover.jpg",
+      "membershipLevel": 2,
+      "additionalInfo": "Homemade meals and baked goods"
+    },
+    {
+      "name": "McLean Auto Repair",
+      "address": "753 Industrial Drive, McLean, VA 22102",
+      "mapLink": "https://maps.google.com/?q=753+Industrial+Drive,McLean,VA+22102",
+      "phone": "(555) 678-9012",
+      "website": "https://mcleanautorepair.com",
+      "image": "cover.jpg",
+      "membershipLevel": 1,
+      "additionalInfo": "Honest and reliable auto service"
+    },
+    {
+      "name": "Creative Designs",
+      "address": "852 Artisan Lane, McLean, VA 22102",
+      "mapLink": "https://maps.google.com/?q=852+Artisan+Lane,McLean,VA+22102",
+      "phone": "(555) 789-0123",
+      "website": "https://creativedesigns.com",
+      "image": "cover.jpg",
+      "membershipLevel": 3,
+      "additionalInfo": "Graphic design and marketing services"
+    }
+  ]
 }
