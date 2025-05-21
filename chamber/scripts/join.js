@@ -1,6 +1,12 @@
 // Set timestamp when page loads
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('timestamp').value = new Date().toISOString();
+    
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Set last modified date
+    document.getElementById('lastModified').textContent = document.lastModified;
 });
 
 // Modal functions
@@ -10,13 +16,23 @@ function openModal(level) {
     modal.innerHTML = `
         <div class="modal-content">
             <span class="close" onclick="this.parentElement.parentElement.remove()">&times;</span>
-            <h3>${level.charAt(0).toUpperCase() + level.slice(1)} Membership Benefits</h3>
+            <h3>${getMembershipTitle(level)} Benefits</h3>
             <ul>
                 ${getBenefits(level).map(b => `<li>${b}</li>`).join('')}
             </ul>
         </div>
     `;
     document.body.appendChild(modal);
+}
+
+function getMembershipTitle(level) {
+    const titles = {
+        np: 'Non-Profit',
+        bronze: 'Bronze',
+        silver: 'Silver',
+        gold: 'Gold'
+    };
+    return titles[level] || 'Membership';
 }
 
 function getBenefits(level) {

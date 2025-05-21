@@ -37,85 +37,87 @@
         </div>
     </header>
 
-    <main class="join-container">
-        <h1 class="join-header">Join McLean Chamber of Commerce</h1>
+    <main>
+        <h1 class="join-header">Join McLean Chamber of Commerce - Membership & Benefits</h1>
         
-        <form id="joinForm" class="join-form" method="get" action="thankyou.html">
-            <fieldset>
-                <legend>Contact Information</legend>
-                <div class="form-grid">
+        <div class="join-container">
+            <form id="joinForm" class="join-form" method="get" action="thankyou.html">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name*</label>
+                            <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name*</label>
+                            <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title/Position</label>
+                            <input type="text" id="title" name="title" pattern="[A-Za-z\- ]{7,}" 
+                                   title="7+ letters, hyphens or spaces only" autocomplete="organization-title">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone*</label>
+                            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Business Information</legend>
                     <div class="form-group">
-                        <label for="firstName">First Name*</label>
-                        <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                        <label for="business">Business Name*</label>
+                        <input type="text" id="business" name="business" required autocomplete="organization">
                     </div>
                     <div class="form-group">
-                        <label for="lastName">Last Name*</label>
-                        <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                        <label for="description">Business Description</label>
+                        <textarea id="description" name="description" rows="4"></textarea>
                     </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Membership Level*</legend>
                     <div class="form-group">
-                        <label for="title">Title/Position</label>
-                        <input type="text" id="title" name="title" pattern="[A-Za-z\- ]{7,}" 
-                               title="7+ letters, hyphens or spaces only" autocomplete="organization-title">
+                        <label for="membership">Select Membership Level*</label>
+                        <select id="membership" name="membership" required>
+                            <option value="">Select Level...</option>
+                            <option value="np">Non-Profit (Free)</option>
+                            <option value="bronze">Bronze ($200/year)</option>
+                            <option value="silver">Silver ($400/year)</option>
+                            <option value="gold">Gold ($800/year)</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email*</label>
-                        <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone*</label>
-                        <input type="tel" id="phone" name="phone" required autocomplete="tel">
-                    </div>
-                </div>
-            </fieldset>
-            
-            <fieldset>
-                <legend>Business Information</legend>
-                <div class="form-group">
-                    <label for="business">Business Name*</label>
-                    <input type="text" id="business" name="business" required autocomplete="organization">
-                </div>
-                <div class="form-group">
-                    <label for="description">Business Description</label>
-                    <textarea id="description" name="description" rows="4"></textarea>
-                </div>
-            </fieldset>
-            
-            <fieldset>
-                <legend>Membership Level*</legend>
-                <div class="form-group">
-                    <label for="membership">Select Membership Level*</label>
-                    <select id="membership" name="membership" required>
-                        <option value="">Select Level...</option>
-                        <option value="np">Non-Profit (Free)</option>
-                        <option value="bronze">Bronze ($200/year)</option>
-                        <option value="silver">Silver ($400/year)</option>
-                        <option value="gold">Gold ($800/year)</option>
-                    </select>
-                </div>
-            </fieldset>
-            
-            <input type="hidden" id="timestamp" name="timestamp">
-            <button type="submit" class="submit-btn">Submit Application</button>
-        </form>
+                </fieldset>
+                
+                <input type="hidden" id="timestamp" name="timestamp">
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
 
-        <div class="benefits-section">
-            <h2>Membership Benefits</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card" onclick="openModal('np')">
-                    <h3>Non-Profit</h3>
-                    <p>Free membership</p>
-                </div>
-                <div class="benefit-card" onclick="openModal('bronze')">
-                    <h3>Bronze</h3>
-                    <p>$200/year</p>
-                </div>
-                <div class="benefit-card" onclick="openModal('silver')">
-                    <h3>Silver</h3>
-                    <p>$400/year</p>
-                </div>
-                <div class="benefit-card" onclick="openModal('gold')">
-                    <h3>Gold</h3>
-                    <p>$800/year</p>
+            <div class="benefits-section">
+                <h2>Membership Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card" onclick="openModal('np')">
+                        <h3>Non-Profit</h3>
+                        <p>Free membership</p>
+                    </div>
+                    <div class="benefit-card" onclick="openModal('bronze')">
+                        <h3>Bronze</h3>
+                        <p>$200/year</p>
+                    </div>
+                    <div class="benefit-card" onclick="openModal('silver')">
+                        <h3>Silver</h3>
+                        <p>$400/year</p>
+                    </div>
+                    <div class="benefit-card" onclick="openModal('gold')">
+                        <h3>Gold</h3>
+                        <p>$800/year</p>
+                    </div>
                 </div>
             </div>
         </div>
