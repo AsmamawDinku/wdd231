@@ -1,0 +1,178 @@
+/* Accounts page specific styles */
+.accounts-hero {
+    background: linear-gradient(rgba(0, 97, 168, 0.8), rgba(0, 97, 168, 0.8)), url('../images/accounts-hero.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.accounts-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.accounts-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.account-filter {
+    padding: 2rem 0;
+    background-color: var(--light-color);
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.account-grid {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.account-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.account-card-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+}
+
+.account-card-header h3 {
+    margin-bottom: 0.5rem;
+}
+
+.account-card-body {
+    padding: 1.5rem;
+}
+
+.account-feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.account-feature-icon {
+    margin-right: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.account-card-footer {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.account-compare {
+    padding: 3rem 0;
+    background-color: var(--light-color);
+}
+
+.account-compare h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.compare-table {
+    overflow-x: auto;
+}
+
+.compare-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.compare-table th, .compare-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.compare-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.compare-table tr:nth-child(even) {
+    background-color: var(--light-gray);
+}
+
+.compare-table tr:hover {
+    background-color: rgba(0, 97, 168, 0.1);
+}
+
+.cta-section {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .accounts-hero {
+        padding: 4rem 0;
+    }
+
+    .accounts-hero h1 {
+        font-size: 2rem;
+    }
+
+    .filter-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 80%;
+    }
+}

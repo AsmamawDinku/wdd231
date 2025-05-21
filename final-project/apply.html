@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for a Bank of Asmamaw Account - Start your banking journey today">
+    <meta name="author" content="Bank of Asmamaw">
+    <meta property="og:title" content="Apply for a Bank of Asmamaw Account">
+    <meta property="og:description" content="Complete our simple application to open your new account.">
+    <meta property="og:type" content="website">
+    <title>Account Application | Bank of Asmamaw</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Bank of Asmamaw Logo" width="200" height="50" loading="lazy">
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="accounts.html">Accounts</a></li>
+                    <li><a href="apply.html" class="active">Apply Now</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-hero">
+            <h1>Open Your New Account</h1>
+            <p>Complete this simple application to get started with Bank of Asmamaw.</p>
+        </section>
+
+        <section class="application-form">
+            <form id="accountApplication" action="thankyou.html" method="get">
+                <div class="form-step active" id="step1">
+                    <h2>Personal Information</h2>
+                    <div class="form-group">
+                        <label for="accountType">Account Type</label>
+                        <select id="accountType" name="accountType" required>
+                            <option value="">Select an account type</option>
+                            <option value="advantage_plus">Advantage Plus Banking</option>
+                            <option value="advantage_safe">Advantage SafeBalance Banking</option>
+                            <option value="advantage_relationship">Advantage Relationship Banking</option>
+                            <option value="advantage_savings">Advantage Savings</option>
+                            <option value="cd">Certificate of Deposit</option>
+                            <option value="ira">IRA</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ssn">Social Security Number</label>
+                        <input type="text" id="ssn" name="ssn" pattern="\d{3}-\d{2}-\d{4}" placeholder="XXX-XX-XXXX" required>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step2">
+                    <h2>Address Information</h2>
+                    <div class="form-group">
+                        <label for="street">Street Address</label>
+                        <input type="text" id="street" name="street" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <select id="state" name="state" required>
+                                <option value="">Select a state</option>
+                                <!-- States will be populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP Code</label>
+                            <input type="text" id="zip" name="zip" pattern="\d{5}(-\d{4})?" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="sameMailing" id="sameMailing">
+                            My mailing address is the same as my residential address
+                        </label>
+                    </div>
+
+                    <div id="mailingAddressSection" style="display: none;">
+                        <h3>Mailing Address</h3>
+                        <div class="form-group">
+                            <label for="mailingStreet">Street Address</label>
+                            <input type="text" id="mailingStreet" name="mailingStreet">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mailingCity">City</label>
+                                <input type="text" id="mailingCity" name="mailingCity">
+                            </div>
+                            <div class="form-group">
+                                <label for="mailingState">State</label>
+                                <select id="mailingState" name="mailingState">
+                                    <option value="">Select a state</option>
+                                    <!-- States will be populated by JavaScript -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mailingZip">ZIP Code</label>
+                                <input type="text" id="mailingZip" name="mailingZip" pattern="\d{5}(-\d{4})?">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <h2>Financial Information</h2>
+                    <div class="form-group">
+                        <label for="employment">Employment Status</label>
+                        <select id="employment" name="employment" required>
+                            <option value="">Select employment status</option>
+                            <option value="employed">Employed</option>
+                            <option value="self_employed">Self-Employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="retired">Retired</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="employerGroup" style="display: none;">
+                        <label for="employer">Employer Name</label>
+                        <input type="text" id="employer" name="employer">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="income">Annual Income</label>
+                        <select id="income" name="income" required>
+                            <option value="">Select income range</option>
+                            <option value="under_25k">Under $25,000</option>
+                            <option value="25k_50k">$25,000 - $50,000</option>
+                            <option value="50k_75k">$50,000 - $75,000</option>
+                            <option value="75k_100k">$75,000 - $100,000</option>
+                            <option value="over_100k">Over $100,000</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="initialDeposit">Initial Deposit Amount ($)</label>
+                        <input type="number" id="initialDeposit" name="initialDeposit" min="25" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="funding">Funding Method</label>
+                        <select id="funding" name="funding" required>
+                            <option value="">Select funding method</option>
+                            <option value="transfer">Transfer from another bank</option>
+                            <option value="check">Mail a check</option>
+                            <option value="debit">Debit card</option>
+                            <option value="branch">Deposit at branch</option>
+                        </select>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="button" class="next-btn">Next</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step4">
+                    <h2>Review & Submit</h2>
+                    <div class="review-section">
+                        <h3>Personal Information</h3>
+                        <div id="reviewPersonal"></div>
+
+                        <h3>Address Information</h3>
+                        <div id="reviewAddress"></div>
+
+                        <h3>Financial Information</h3>
+                        <div id="reviewFinancial"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="terms" id="terms" required>
+                            I agree to the <a href="#" id="termsModalBtn">Terms and Conditions</a> and authorize Bank of Asmamaw to obtain credit reports and verify information.
+                        </label>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="prev-btn">Previous</button>
+                        <button type="submit" class="submit-btn">Submit Application</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="form-sidebar" id="contact">
+            <div class="sidebar-card">
+                <h3>Need Help?</h3>
+                <p>Our customer service team is available 24/7 to assist you with your application.</p>
+                <p><strong>Phone:</strong> 1-800-555-1000</p>
+                <p><strong>Email:</strong> customer.service@bankofasmamaw.com</p>
+            </div>
+            <div class="sidebar-card">
+                <h3>What You'll Need</h3>
+                <ul>
+                    <li>Social Security Number</li>
+                    <li>Government-issued ID</li>
+                    <li>Funding information</li>
+                    <li>10-15 minutes of time</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Terms and Conditions Modal -->
+    <div class="modal" id="termsModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Terms and Conditions</h2>
+            <div class="modal-body">
+                <p>By submitting this application, you agree to the following terms and conditions:</p>
+                <ol>
+                    <li>You authorize Bank of Asmamaw to obtain credit reports and verify the information provided.</li>
+                    <li>You confirm that all information provided is accurate and complete.</li>
+                    <li>Bank of Asmamaw may use the information provided to determine your eligibility for products and services.</li>
+                    <li>Approval of your account is subject to verification and Bank of Asmamaw's policies.</li>
+                    <li>Monthly service fees may apply based on the account type selected.</li>
+                    <li>You agree to receive electronic communications and disclosures.</li>
+                </ol>
+                <p>For full terms and conditions, please visit our website or contact customer service.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+              <!--<img src="images/logo.png" alt="Bank of Asmamaw Logo" width="160" height="40" loading="lazy">-->
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Accounts</h3>
+                    <ul>
+                        <li><a href="accounts.html">Checking</a></li>
+                        <li><a href="accounts.html">Savings</a></li>
+                        <li><a href="accounts.html">CDs</a></li>
+                        <li><a href="accounts.html">IRAs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Online Banking</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                        <li><a href="#">Investments</a></li>
+                        <li><a href="#">Loans</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Security Center</a></li>
+                        <li><a href="attributions.html">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bank of Asmamaw. All rights reserved.</p>
+                <p><a href="https://youtu.be/demo-video" target="_blank">View Project Video</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
