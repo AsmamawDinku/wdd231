@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // Display accounts
-    function displayAccounts(filter = 'all') {
+    function displayAccounts(filter = 'all') { 
         accountContainer.innerHTML = '';
         
         const filteredAccounts = filter === 'all' 
@@ -259,9 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
             : accountData.filter(account => account.type === filter);
         
         filteredAccounts.forEach(account => {
-            const accountCard = document.createElement('div');
-            accountCard.className = 'account-card';
-            accountCard.innerHTML = `
+            const accountCard = document.createElement('div'); // Create a new div for each account 
+            accountCard.className = 'account-card'; // Set the class name for styling
+            accountCard.innerHTML = ` 
                 <div class="account-card-header">
                     <h3>${account.name}</h3>
                     <p>${account.description}</p>

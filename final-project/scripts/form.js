@@ -268,13 +268,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Store form data in localStorage as user progresses
     if (form) {
-        form.addEventListener('input', (e) => {
-            const formData = new FormData(form);
-            const formObject = {};
-            formData.forEach((value, key) => {
-                formObject[key] = value;
+        form.addEventListener('input', (e) => { // Save form data to localStorage
+            const formData = new FormData(form); // Create a FormData object from the form
+            const formObject = {}; // Create an empty object to store form data in key-value pairs 
+            formData.forEach((value, key) => { // Iterate or reapet  over each form field 
+                formObject[key] = value; // Store the value in the object using the field name as the key
             });
-            localStorage.setItem('bankApplicationForm', JSON.stringify(formObject));
+            localStorage.setItem('bankApplicationForm', JSON.stringify(formObject)); // Save the object to localStorage as a JSON string
         });
 
         // Load saved form data if available

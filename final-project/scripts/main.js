@@ -1,6 +1,6 @@
 // Main JavaScript for the site
-import { loadTestimonials } from './modal.js';
-
+import { loadTestimonials } from './modal.js'; // Import the loadTestimonials function from modal.js
+import {initMap} from './map.js'; // Import the initMap function from map.js
 // Initialize Google Map
 function initMap() {
     const headquarters = { lat: 38.9246, lng: -77.2203 }; // Coordinates for McLean, VA

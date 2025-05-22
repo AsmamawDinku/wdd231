@@ -9,18 +9,18 @@ export function closeModal(modal) {
     document.body.style.overflow = 'auto';
 }
 
-export async function loadTestimonials() {
+export async function loadTestimonials() { // load testimonals from the api and display them
     try {
         const response = await fetch('https://api.npoint.io/3d8f1b3a3a3a3a3a3a3a'); // Example API endpoint for testimonials
-        if (!response.ok) {
-            throw new Error('Failed to fetch testimonials');
+        if (!response.ok) { // Check if the response is ok
+            throw new Error('Failed to fetch testimonials'); // If not, throw an error
         }
-        const testimonials = await response.json();
-        displayTestimonials(testimonials);
-    } catch (error) {
-        console.error('Error loading testimonials:', error);
+        const testimonials = await response.json(); // Parse the JSON response
+        displayTestimonials(testimonials); // Call the function to display testimonials
+    } catch (error) { // Handle errors
+        console.error('Error loading testimonials:', error); // Log the error
         // Fallback testimonials
-        const fallbackTestimonials = [
+        const fallbackTestimonials = [ // Fallback testimonials in case of an error
             {
                 text: "Bank of Asmamaw has been a great partner for my small business. Their online banking is easy to use and their customer service is excellent.",
                 author: "Moroni",
@@ -36,8 +36,10 @@ export async function loadTestimonials() {
                 author: "David Wilson",
                 role: "New Customer"
             }
+
+    
         ];
-        displayTestimonials(fallbackTestimonials);
+        displayTestimonials(fallbackTestimonials); // Display fallback testimonials 
     }
 }
 
