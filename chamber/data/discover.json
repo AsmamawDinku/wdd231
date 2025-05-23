@@ -2,46 +2,45 @@
   "attractions": [
     {
       "name": "Clemyjontri Park",
-      "address": "6317 Georgetown Pike, McLean, VA",
+      "address": "6317 Georgetown Pike, McLean, VA",
       "description": "A colorful playground designed for children of all abilities.",
       "image": "images/attractions/clemyjontri.webp",
       "map": "https://goo.gl/maps/a1bClemy"
     },
     {
       "name": "Great Falls Park",
-      "address": "9200 Old Dominion Dr, McLean, VA",
+      "address": "9200 Old Dominion Dr, McLean, VA",
       "description": "Scenic waterfalls, hiking trails, and Potomac River overlooks.",
       "image": "images/attractions/great-falls.webp",
       "map": "https://goo.gl/maps/b2cGreat"
     },
     {
-      "name": "Tysons Galleria",
-      "address": "2001 International Dr, McLean, VA",
-      "description": "Luxury shopping destination with high‑end stores and dining.",
+      "name": "Tysons Galleria",
+      "address": "2001 International Dr, McLean, VA",
+      "description": "Luxury shopping destination with high-end stores and dining.",
       "image": "images/attractions/tysons-galleria.webp",
       "map": "https://goo.gl/maps/c3dTysons"
     },
     {
       "name": "McLean Central Park",
-      "address": "1468 Dolley Madison Blvd, McLean, VA",
+      "address": "1468 Dolley Madison Blvd, McLean, VA",
       "description": "Peaceful green space with walking paths and an amphitheater.",
       "image": "images/attractions/mclean-central.webp",
       "map": "https://goo.gl/maps/d4eCentral"
     },
     {
       "name": "Claude Moore Colonial Farm",
-      "address": "6310 Georgetown Pike, McLean, VA",
-      "description": "Step back in time at this living 18th‑century farm museum.",
-      "image": "images/attractions/claude‑moore.webp",
+      "address": "6310 Georgetown Pike, McLean, VA",
+      "description": "Step back in time at this living 18th-century farm museum.",
+      "image": "images/attractions/scotts-run.webp",
       "map": "https://goo.gl/maps/e5fClaude"
     },
     {
-      "name": "Scott’s Run Nature Preserve",
-      "address": "7400 VA‑193, McLean, VA",
+      "name": "Scott's Run Nature Preserve",
+      "address": "7400 VA-193, McLean, VA",
       "description": "Wooded preserve with waterfalls and Potomac River views.",
       "image": "images/attractions/scotts-run.webp",
       "map": "https://goo.gl/maps/f6gScotts"
     }
-    
   ]
 }
