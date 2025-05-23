@@ -3,24 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-  <title>Discover McLean | McLean Chamber of Commerce</title>
-  <meta name="description" content="Discover parks, shopping, and historical sites in McLean, Virginia.">
-  <meta name="author" content="Asmamaw Dinku">
+  <title>Discover McLean | McLean Chamber of Commerce</title>
+  <meta name="description" content="Explore parks, shopping, historical sites and 8 must-see attractions in McLean, Virginia.">
+  <meta name="author" content="Asmamaw Dinku">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico">
 
-  <!-- Open‑Graph -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Discover McLean | McLean Chamber of Commerce">
-  <meta property="og:description" content="Explore eight must‑see attractions, demographics, and highlights of McLean, VA.">
-  <meta property="og:image" content="images/og-discover.webp">
+  <meta property="og:description" content="Explore eight must-see attractions, demographics, and highlights of McLean, VA.">
+  <meta property="og:image" content="https://asmamawdinku.github.io/wdd231/chamber/images/og-discover.webp">
   <meta property="og:url" content="https://asmamawdinku.github.io/wdd231/chamber/discover.html">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/discover.css">
-  <!-- cleaned copy of FA to silence validator -->
   <link rel="stylesheet" href="styles/fa.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -30,7 +28,7 @@
   <header>
     <div class="header-content">
       <div class="logo">
-        <img src="images/logo.png" alt="McLean Chamber of Commerce Logo">
+        <img src="images/logo.png" alt="McLean Chamber of Commerce Logo" loading="lazy">
         <h1>McLean Chamber of Commerce</h1>
       </div>
       <nav>
@@ -46,9 +44,7 @@
   </header>
 
   <main class="discover-container">
-    <!-- first element inside main to satisfy audit -->
     <h1>Discover McLean</h1>
-
     <div class="discover-header">
       <p>Explore the vibrant community of McLean, Virginia</p>
     </div>
@@ -62,12 +58,12 @@
       <div class="demographics-card">
         <h2><i class="fas fa-chart-pie"></i> McLean Demographics</h2>
         <ul>
-          <li><strong>Population:</strong> 50,773 (2022 est.)</li>
+          <li><strong>Population:</strong> 50,773 (2022 est.)</li>
           <li><strong>Median Income:</strong> $190,000</li>
-          <li><strong>Median Home Value:</strong> $1.2 M</li>
-          <li><strong>Top Employers:</strong> Capital One, Freddie Mac, Booz Allen Hamilton</li>
+          <li><strong>Median Home Value:</strong> $1.2 M</li>
+          <li><strong>Top Employers:</strong> Capital One, Freddie Mac, Booz Allen Hamilton</li>
         </ul>
-        <p class="demographics-source">Source: U.S. Census Bureau, Fairfax County</p>
+        <p class="demographics-source">Source: U.S. Census Bureau, Fairfax County</p>
       </div>
 
       <div class="statistics-card">
@@ -82,7 +78,7 @@
     </aside>
 
     <section class="attractions-grid" id="attractions-container">
-      <!-- attraction cards injected by JS -->
+      <!-- Cards will be inserted by JavaScript -->
     </section>
   </main>
 
@@ -92,18 +88,18 @@
         <img src="images/logo.png" alt="McLean Chamber of Commerce Logo" loading="lazy">
         <div>
           <h3>McLean Chamber of Commerce</h3>
-          <p>2001 International Dr, McLean, VA 22102</p>
+          <p>2001 International Dr, McLean, VA 22102</p>
           <p><a href="https://maps.google.com/?q=2001+International+Dr,McLean,VA+22102" target="_blank" rel="noopener">
             <i class="fas fa-map-marker-alt"></i> View on Google Maps
           </a></p>
           <p><i class="fas fa-envelope"></i> info@mcleanchamber.org</p>
-          <p><i class="fas fa-phone"></i> (703) 123‑4567</p>
+          <p><i class="fas fa-phone"></i> (703) 123-4567</p>
         </div>
       </div>
       <div class="developer-info">
         <p>&copy;<span id="copyright-year"></span> McLean Chamber of Commerce</p>
-        <p>Asmamaw Dinku</p>
-        <p>WDD 231 Project</p>
+        <p>Asmamaw Dinku</p>
+        <p>WDD 231 Project</p>
         <p>Last Modified: <span id="last-modified"></span></p>
       </div>
     </div>
