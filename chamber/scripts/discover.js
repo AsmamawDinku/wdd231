@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* visit message */
-  const msg  = document.getElementById("visit-message");
-  const now  = Date.now();
+  const msg = document.getElementById("visit-message");
+  const now = Date.now();
   const last = Number(localStorage.getItem("lastVisit") || 0);
 
-  if (!last){
+  if (!last) {
     msg.textContent = "Welcome! Let us know if you have any questions.";
   } else {
     const days = Math.floor((now - last) / 86_400_000);
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <h3>${a.name}</h3>
               <address>${a.address}</address>
               <p>${a.description}</p>
-              <a class="learn-btn" href="${a.map}" target="_blank" rel="noopener">Learn More</a>
+              <a class="learn-btn" href="${a.map}" target="_blank" rel="noopener">Learn More</a>
             </div>
           </article>
         `);
